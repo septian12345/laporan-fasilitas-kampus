@@ -1,0 +1,131 @@
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  color: #1f2937;
+}
+.navbar {
+  background: #1e3a8a;
+  color: white;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar-brand { font-weight: 600; font-size: 1.1rem; }
+.navbar-links a, .navbar-links .btn-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 0.95rem;
+}
+.navbar-links .btn-link { background: none; border: none; cursor: pointer; font-family: inherit; }
+.navbar-user { margin-left: 16px; opacity: 0.9; font-size: 0.9rem; }
+
+.container { max-width: 900px; margin: 30px auto; padding: 0 16px; }
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.card-narrow { max-width: 420px; margin: 40px auto; }
+.card-link { display: block; text-decoration: none; color: inherit; transition: transform 0.1s; }
+.card-link:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+
+.form { display: flex; flex-direction: column; gap: 6px; }
+.form label { font-size: 0.9rem; font-weight: 600; margin-top: 8px; }
+.form input, .form select, .form textarea {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+  width: fit-content;
+}
+.btn-primary:hover { background: #1d4ed8; }
+.btn-small {
+  background: #2563eb; color: white; border: none; padding: 6px 12px;
+  border-radius: 5px; font-size: 0.85rem; cursor: pointer;
+}
+.btn-link { color: #2563eb; text-decoration: none; }
+
+.muted { color: #6b7280; }
+.small { font-size: 0.85rem; }
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 600;
+}
+.badge-menunggu { background: #f59e0b; }
+.badge-diproses { background: #3b82f6; }
+.badge-selesai { background: #16a34a; }
+.badge-ditolak { background: #dc2626; }
+
+.alert-error { background: #fee2e2; color: #991b1b; padding: 10px; border-radius: 6px; font-size: 0.9rem; }
+.alert-success { background: #dcfce7; color: #166534; padding: 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 16px; }
+
+.hint-box {
+  margin-top: 20px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.empty-state { text-align: center; color: #6b7280; }
+
+.report-photo { max-width: 100%; border-radius: 8px; margin-top: 14px; }
+
+.timeline { list-style: none; padding: 0; }
+.timeline li { border-left: 3px solid #3b82f6; padding: 10px 16px; margin-bottom: 10px; }
+
+.stats-row { display: flex; gap: 14px; margin-bottom: 20px; flex-wrap: wrap; }
+.stat-box {
+  background: white; padding: 16px 24px; border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); text-align: center; flex: 1; min-width: 120px;
+}
+.stat-box strong { display: block; font-size: 1.6rem; color: #1e3a8a; }
+.stat-box span { font-size: 0.85rem; color: #6b7280; }
+
+.filter-bar { margin-bottom: 16px; }
+.filter-bar a {
+  text-decoration: none; color: #374151; margin-right: 10px; padding: 6px 12px;
+  border-radius: 20px; font-size: 0.9rem; background: #e5e7eb;
+}
+.filter-bar a.active { background: #2563eb; color: white; }
+
+.table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; }
+.table th, .table td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 0.9rem; text-align: left; }
+.table th { background: #f9fafb; }
+.table a { color: #2563eb; text-decoration: none; }
+
+.inline-form { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.catatan-input { padding: 5px; border: 1px solid #d1d5db; border-radius: 5px; font-size: 0.8rem; width: 130px; }
