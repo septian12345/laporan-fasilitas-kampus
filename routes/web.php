@@ -5,8 +5,10 @@ use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
+
+
 
 Route::middleware(['auth'])->group(function () {
 
@@ -23,8 +25,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/laporan', [LaporanController::class, 'store'])->name('laporan.store');
     Route::get('/laporan/{laporan}', [LaporanController::class, 'show'])->name('laporan.show');
 
-    // Modul Admin/Petugas (kelola laporan)
-    Route::middleware(['role:admin,petugas'])->prefix('admin')->name('admin.')->group(function () {
+    // Modul Admin (kelola laporan)
+    Route::middleware(['role:admin'])->prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
         Route::put('/laporan/{laporan}/update-status', [AdminDashboardController::class, 'updateStatus'])->name('updateStatus');
     });

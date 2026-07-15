@@ -19,10 +19,10 @@
         </select>
 
         <label>Judul Laporan</label>
-        <input type="text" name="judul" placeholder="Contoh: AC Ruang B2 Mati" value="{{ old('judul') }}" required>
+        <input type="text" name="judul" placeholder="Contoh: AC Ruang R5608 Mati" value="{{ old('judul') }}" required>
 
         <label>Lokasi</label>
-        <input type="text" name="lokasi" placeholder="Contoh: Gedung B, Lantai 2, Ruang B2.1" value="{{ old('lokasi') }}" required>
+        <input type="text" name="lokasi" placeholder="Contoh: Gedung Lama, Lantai 2, Ruang R5608" value="{{ old('lokasi') }}" required>
 
         <label>Deskripsi Kerusakan</label>
         <textarea name="deskripsi" rows="4" placeholder="Jelaskan kerusakan yang terjadi..." required>{{ old('deskripsi') }}</textarea>
