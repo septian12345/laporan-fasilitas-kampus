@@ -26,7 +26,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/laporan/{laporan}', [LaporanController::class, 'show'])->name('laporan.show');
 
     // Modul Admin (kelola laporan)
-    Route::middleware(['role:admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::middleware(['role:admin,petugas'])->prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
         Route::put('/laporan/{laporan}/update-status', [AdminDashboardController::class, 'updateStatus'])->name('updateStatus');
     });
