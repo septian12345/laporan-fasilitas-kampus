@@ -9,7 +9,9 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-brand">🏫 Laporan Fasilitas Kampus</div>
+        <div class="navbar-brand">
+    <img src="{{ asset('images/logo-horizontal.png') }}" alt="Laporan Fasilitas Kampus" style="height: 32px; vertical-align: middle;">
+</div>
         <div class="navbar-links">
             @auth
                 @if(auth()->user()->role === 'mahasiswa')
